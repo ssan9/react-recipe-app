@@ -1,0 +1,14 @@
+.search-text {
+	border: none;
+	border: 1px solid white;
+	width: 40%;
+	line-height: 1.4;
+}
+
+.search-button {
+	color: white;
+	background-color: #f48360;
+	border: none;
+	padding: 0 15px;
+	line-height: 1.8;
+}
