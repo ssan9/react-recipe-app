@@ -9,7 +9,6 @@ export default class RecipeSearchBar extends React.Component {
 
 	render() {
 		const recipeList = this.props.q;
-
 		let recipeA = [];
 
 		for(let recipes in recipeList) {
