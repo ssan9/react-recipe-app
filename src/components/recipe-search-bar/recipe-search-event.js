@@ -39,7 +39,6 @@ class RecipeSearchEvent extends React.Component {
 			<div>
 				<RecipeSearchBar 
 					q={this.props.q}
-					submitValue={this.state.submit}
 					handleChange={this.handleChange}
 					handleSearch={this.handleSearch} 
 					submit={this.state.submit}

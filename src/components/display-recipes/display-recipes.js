@@ -3,7 +3,7 @@ import React from 'react';
 import './display-recipes.css';
 
 export default function DisplayRecipes(props) {
-	const {ingredients, label, image} = props;
+	const { ingredients, label, image } = props;
 
 	const ingredientsArray = ingredients && ingredients.map((ingredient, i) => {
 		return <li key={i}>{ingredient.text}</li>
