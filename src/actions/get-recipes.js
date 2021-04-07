@@ -9,7 +9,6 @@ export const changeQuery = (query) => ({
 
 export const FETCH_GET_DATA_SUCCESS = 'FETCH_GET_DATA_SUCCESS';
 export const fetchGetDataSuccess = (data) => {
-	console.log('fetchGetDataSuccess-data', data);
 	return ({
 		type: FETCH_GET_DATA_SUCCESS,
 		data

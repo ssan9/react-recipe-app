@@ -2,32 +2,28 @@ import React from 'react';
 
 import './display-recipes.css';
 
-export default class DisplayRecipes extends React.Component {
-	constructor(props) {
-		super(props);
-	}
+export default function DisplayRecipes(props) {
+	const {ingredients, label, image} = props;
 
-	render() {
-		const ingredientsArray = this.props.ingredients && this.props.ingredients.map((ingredient, i) => {
-			return <li key={i}>{ingredient.text}</li>
-		});
+	const ingredientsArray = ingredients && ingredients.map((ingredient, i) => {
+		return <li key={i}>{ingredient.text}</li>
+	});
 
-		let isRecipeResult = this.props.label && this.props.ingredients && this.props.image ? 'recipe-result' : 'hide';
-		let isLabel = this.props.label && this.props.label ? 'label' : 'hide';
-		let isIngredients = this.props.ingredients && this.props.ingredients ? 'ingredients' : 'hide';
-		let isImage = this.props.image && this.props.image ? 'recipe-image' : 'hide';
+	let isRecipeResult = label && ingredients && image ? 'recipe-result' : 'hide';
+	let isLabel = label ? 'label' : 'hide';
+	let isIngredients = ingredients ? 'ingredients' : 'hide';
+	let isImage = image ? 'recipe-image' : 'hide';
 
-
-		return (
-			<div className="display-recipes">
-				<div className={`${isRecipeResult}`}>
-					<p className={`${isLabel} common-style`}>{this.props.label}</p>
-					<ul className={`${isIngredients} common-style`}>
-						{ingredientsArray}
-					</ul>
-					{this.props.image && <img src={this.props.image} className={`${isImage} common-style`} alt={`image - ${this.props.label}`} />}
-				</div>
+	return (
+		<div className="display-recipes">
+			<div className={`${isRecipeResult}`}>
+				<p className={`${isLabel} common-style`}>{props.label}</p>
+				<ul className={`${isIngredients} common-style`}>
+					{ingredientsArray}
+				</ul>
+				{image && <img src={image} className={`${isImage} common-style`} alt={`image - ${label}`} />}
 			</div>
-		);
-	}
+		</div>
+	);
 }
+

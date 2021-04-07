@@ -5,7 +5,7 @@ export default function Recipe() {
   return (
     <div className="Recipe">
         <header className="Recipe-header">
-        <h4>Recipe Finder</h4>
+        	<h4>Recipe Finder</h4>
         </header>
         <RecipeSearchEvent />
     </div>
