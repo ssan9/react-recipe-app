@@ -28,23 +28,23 @@ export default function RecipeSearchBar(props) {
 		
 	return (
 		<div className="wrapper">
-		<div className="recipe-form">
-			<h1>Find your Recipe</h1>
-			<form>
-				<div className="search-bar">
-					<input type="text"
-						className="search-text"
-						name="recipe-search" 
-						value={value}
-						onChange={handleChange} />
-					<button type="submit" 
-						className="search-button"
-						onClick={handleSearch}>Search
-					</button>
-				</div>
-			</form>
+			<div className="recipe-form">
+				<h1>Find your Recipe</h1>
+				<form>
+					<div className="search-bar">
+						<input type="text"
+							className="search-text"
+							name="recipe-search" 
+							value={value}
+							onChange={handleChange} />
+						<button type="submit" 
+							className="search-button"
+							onClick={handleSearch}>Search
+						</button>
+					</div>
+				</form>
 			</div>
-				{recipeArray}
+			{recipeArray}
 		</div>
 	);
 }
