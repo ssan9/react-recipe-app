@@ -30,7 +30,7 @@ class RecipeSearchEvent extends React.Component {
 			submit: this.props.q,
 			input: ''
 		}, () => {                              
-        console.log(this.state.submit) 
+        console.log('stateeee', this.state.submit) // setState is async so console.log(this.state.value) will not print the updated state value, you need to use callback function with setState.
       });
 		this.props.action.fetchGetData(this.props.q);
 	}

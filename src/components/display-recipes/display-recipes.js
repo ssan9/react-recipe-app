@@ -17,11 +17,11 @@ export default function DisplayRecipes(props) {
 	return (
 		<div className="display-recipes">
 			<div className={`${isRecipeResult}`}>
-				<p className={`${isLabel} common-style`}>{props.label}</p>
-				<ul className={`${isIngredients} common-style`}>
+				<p className={`${isLabel} text-style`}>{props.label}</p>
+				<ul className={`${isIngredients} text-style`}>
 					{ingredientsArray}
 				</ul>
-				{image && <img src={image} className={`${isImage} common-style`} alt={`image - ${label}`} />}
+				{image && <img src={image} className={`${isImage} image-style`} alt={`image - ${label}`} />}
 			</div>
 		</div>
 	);

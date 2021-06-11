@@ -27,7 +27,9 @@ export default function RecipeSearchBar(props) {
 	});
 		
 	return (
-		<div>
+		<div className="wrapper">
+		<div className="recipe-form">
+			<h1>Find your Recipe</h1>
 			<form>
 				<div className="search-bar">
 					<input type="text"
@@ -41,7 +43,8 @@ export default function RecipeSearchBar(props) {
 					</button>
 				</div>
 			</form>
-			{recipeArray}
+			</div>
+				{recipeArray}
 		</div>
 	);
 }

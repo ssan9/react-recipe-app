@@ -8,8 +8,12 @@
 	float: left;
 }
 
-.common-style {
+.text-style {
 	margin: 1% auto;
+}
+
+.image-style {
+	margin: 3% 22%;
 }
 
 .label {
