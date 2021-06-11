@@ -7,6 +7,7 @@ import {
 
 const initialState = {
 	q: '',
+	input: '',
 	error: null
 };
 
@@ -15,12 +16,14 @@ export default function reducer(state = initialState, action) {
 		case TRACK_QUERY:
 			return {
 				...state,
-				q: action.query.target.value
+				q: action.query.target.value,
+				input: action.query.target.value
 			}
 		case CHANGE_QUERY:
 			return {
 				...state,
-				q: action.updatedQuery
+				q: action.updatedQuery,
+				input: ''
 			}
 		case FETCH_GET_DATA_SUCCESS:
 			return {
