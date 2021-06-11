@@ -1,10 +1,16 @@
 const APP_ID = '8cb6adf8';
 const APP_KEY = '7a3d78721af1f1ecdf1201a47ffee352';
 
-export const CHANGE_QUERY = 'CHANGE_QUERY';
-export const changeQuery = (query) => ({
-	type: 'CHANGE_QUERY',
+export const TRACK_QUERY = 'TRACK_QUERY';
+export const trackQuery = (query) => ({
+	type: 'TRACK_QUERY',
 	query
+});
+
+export const CHANGE_QUERY = 'CHANGE_QUERY';
+export const changeQuery = (updatedQuery) => ({
+	type: 'CHANGE_QUERY',
+	updatedQuery
 });
 
 export const FETCH_GET_DATA_SUCCESS = 'FETCH_GET_DATA_SUCCESS';

@@ -1,4 +1,5 @@
 import {
+	TRACK_QUERY,
 	CHANGE_QUERY,
 	FETCH_GET_DATA_SUCCESS,
 	FETCH_GET_DATA_FAILURE 
@@ -11,10 +12,15 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
 	switch(action.type) {
-		case CHANGE_QUERY:
+		case TRACK_QUERY:
 			return {
 				...state,
 				q: action.query.target.value
+			}
+		case CHANGE_QUERY:
+			return {
+				...state,
+				q: action.updatedQuery
 			}
 		case FETCH_GET_DATA_SUCCESS:
 			return {
