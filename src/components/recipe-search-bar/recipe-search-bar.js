@@ -3,7 +3,7 @@ import './recipe-search-bar.css';
 import DisplayRecipes from '../display-recipes/display-recipes';
 
 export default function RecipeSearchBar(props) {
-	const { q, submit, handleSearch, value, handleChange } = props;
+	const { q, handleSearch, value, handleChange } = props;
 
 	const recipeList = q;
 		let recipeA = [];
@@ -14,7 +14,7 @@ export default function RecipeSearchBar(props) {
 			}
 		}
 
-	const recipeArray = submit && recipeA.map((recipes, i) => {
+	const recipeArray = recipeA.map((recipes, i) => {
 		return (
 			<div key={i}>
 				<DisplayRecipes
